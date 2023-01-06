@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Elevator Game</title>
+	<style type="text/css">
+		* {
+			padding: 0;
+			margin: 0;
+		}
+
+		body {
+			background-color: black;
+		}
+		.land {
+			width: 100px;
+			height: 568px;
+			background-color: gray;
+			display: inline-block;
+			border-left:  2px solid black;
+			border-right: 2px solid black;
+		}
+
+		padd {
+			padding-left: 20px;
+			padding-top: 20px;
+			z-index: 300;
+			position: relative;
+		}
+
+		.player {
+			width: 70px;
+			height: 75px;
+			position: absolute;
+			top: 480px;
+			left: 150px;
+			background-image: url(adude.png);
+        	background-size: 100%;
+		}
+
+				.thing {
+			background-color: red;
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			top: 10px;
+			left: 126px;
+			z-index: 2;
+			background-image: url(elevator.jpg);
+        	background-size: 100%;
+			
+		}
+						.thing2 {
+			background-color: red;
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			top: 10px;
+			left: 22px;
+			z-index: 2;
+			background-image: url(elevatorup.jpg.png);
+        	background-size: 100%;
+			
+		}
+						.thing3 {
+			background-color: red;
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			top: 0px;
+			left: 230px;
+			z-index: 2;
+			background-image: url(elevator.jpg.png);
+        	background-size: 100%;
+			
+		}
+
+						.thing4 {
+			background-color: red;
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			top: 0px;
+			left: 334px;
+			z-index: 2;
+			background-image: url(elevatorup.jpg.png);
+        	background-size: 100%;
+			
+		}
+
+		.block {
+			z-index: 501;
+			width: 100%;
+			height: 100px;
+			position: relative;
+			top: -20px;
+		}
+
+		button {
+			font-size: 25px;
+			padding: 10px;
+			font-family: Computer Modern;
+		}
+
+		.portal {
+	background-image: url('blueportal.png');
+	width: 100px; 
+	height: 100px;
+	transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	top:450px;
+	position: absolute;
+	display: none;
+	left: 230px;
+}
+
+.loserscreen {
+	background: rgba(255,250,250,.1); 
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	text-align: left;
+	font-size: 30px;
+	line-height: 800px;
+	display: none;
+	z-index: 100000000;
+} 
+
+.winnerscreen {
+	background: rgba(255,250,250,.3); 
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	text-align: left;
+	font-size: 100px;
+	z-index: 100000002;
+	line-height: 200px;
+	display: none;
+	filter: invert(100%);
+} 
+
+.balloon {
+			width: 75px;
+			height: 75px;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			background-image: url(Rba.png);
+        	background-size: 100%;
+        	z-index:100000001; 
+        	display: none;
+        	filter: invert(100%);
+}
+
+
+
+</style>
+</head>
+<body>
+
+<padd></padd>
+	<div class="land"></div><div class="land" id="land2" >
+	<div class="thing"></div>
+	<div class="thing2"></div>
+	<div class="portal"></div>
+	<div class="thing3"></div>
+	<div class="player"></div></div><div class="land" id="land3" ></div><div class="land" style="opacity: 0;" id="r"><div class="thing4"></div></div>
+<br><br><padd></padd><button style="font-size: 30px;" onmousedown="left();">Left</button> <button style="font-size: 30px;"onmousedown="right();">Right</button><br><br>
+<padd></padd><button onmousedown="bob();">START</button> <br> <div class="loserscreen"><padd style = "padding-left: 130px;"></padd> You Died <br> 
+<button style="position: absolute; top: 430px; left: 110px; z-index: 1000;" onmousedown="startover();">Play again </button></div>
+<br> <div class="winnerscreen"><padd style = "padding-left: 30px;"></padd> YOU <br><padd style = "padding-left: 30px;"></padd>HAVE <br><padd style = "padding-left: 30px;"></padd>WON! <br> </div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+</body>
+<script src="move.js"></script>
+</html>
